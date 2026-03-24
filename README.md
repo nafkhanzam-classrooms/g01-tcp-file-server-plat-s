@@ -5,6 +5,7 @@
 | Nama           | NRP        | Kelas     |
 | ---            | ---        | ----------|
 |Zulkarnaen Ramdhani | 5025241043 | ProgJar D |
+| Vityaz Ali Firdaus | 5025241050 | ProgJar D |
 |                |            |           |
 
 ## Link Youtube (Unlisted)
