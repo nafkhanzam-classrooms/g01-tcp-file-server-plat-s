@@ -4,7 +4,7 @@
 ## Anggota Kelompok
 | Nama           | NRP        | Kelas     |
 | ---            | ---        | ----------|
-|                |            |           |
+|Zulkarnaen Ramdhani | 5025241043 | ProgJar D |
 |                |            |           |
 
 ## Link Youtube (Unlisted)
