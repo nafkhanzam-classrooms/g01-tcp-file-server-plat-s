@@ -156,3 +156,13 @@ Pada implementasi ini, disisipkan sebuah blok try-except AttributeError sebagai 
 
 - tampilan log pada server <br>
 ![log](img/log.png)
+
+
+<img width="1755" height="332" alt="image" src="https://github.com/user-attachments/assets/0c56095e-36ee-4e42-b307-90820a196018" />            
+
+<img width="1737" height="392" alt="image" src="https://github.com/user-attachments/assets/029b2d9f-9aae-45b3-a421-e22a50cfdfa4" />            
+
+<img width="1754" height="350" alt="image" src="https://github.com/user-attachments/assets/5f2a9543-4fa3-465a-97bf-b19f2fc226d6" />            
+
+
+
