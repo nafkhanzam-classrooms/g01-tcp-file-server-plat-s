@@ -166,7 +166,7 @@ Pada implementasi ini, disisipkan sebuah blok try-except AttributeError sebagai 
 - Tampilan log log aktivitas dari server-thread.py yang merekam koneksi dua klien sekaligus dan memproses permintaan chat broadcast, upload file, permintaan daftar, serta download file dari mereka.                
 <img width="1754" height="350" alt="image" src="https://github.com/user-attachments/assets/5f2a9543-4fa3-465a-97bf-b19f2fc226d6" />            
 
-- Bukti struktur file proyek yang menunjukkan bahwa file client_rec_tes.txt benar-benar berhasil diunduh dan tersimpan di direktori lokal.
+- Bukti struktur file proyek yang menunjukkan bahwa file client_rec_tes.txt benar-benar berhasil diunduh dan tersimpan di direktori lokal.            
   <img width="390" height="293" alt="image" src="https://github.com/user-attachments/assets/3635ed1f-c4f9-4ca8-9061-afd81c94ac12" />
 
 
