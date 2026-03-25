@@ -20,17 +20,14 @@ https://youtu.be/mqZDwa2pu_A
    Pendekatan pertama menggunakan modul threading bawaan Python untuk mendelegasikan setiap koneksi klien ke dalam proses atau "jalur" yang terpisah.
 
 ```
-# ... [inisialisasi socket] ...
-clients = [] # Menyimpan daftar klien untuk fitur broadcast
+clients = [] 
 
 def start_server():
-    # ... [bind dan listen] ...
     try:
         while True:
             conn, addr = server.accept()
             clients.append(conn)
             
-            # Membuat thread baru khusus untuk klien yang baru terhubung
             thread = threading.Thread(target=handle_client, args=(conn, addr))
             thread.daemon = True
             thread.start()
@@ -46,28 +43,22 @@ Dengan cara ini, thread utama (Main Thread) dapat langsung kembali ke posisi ser
    Pendekatan kedua menggunakan modul select untuk memantau aktivitas banyak socket sekaligus dalam satu thread tunggal (tanpa membuat thread baru).
 
 ```
-# ... [inisialisasi socket] ...
-sockets_list = [server] # Daftar socket yang dipantau
+sockets_list = [server] 
 clients = {} 
 
 def start_server():
-    # ... [bind dan listen] ...
     try:
         while True:
-            # Memantau socket mana yang siap dibaca (Non-blocking)
             read_sockets, _, exception_sockets = select.select(sockets_list, [], sockets_list)
 
             for notified_socket in read_sockets:
-                # Kondisi 1: Jika server menerima koneksi baru
                 if notified_socket == server:
                     conn, addr = server.accept()
                     sockets_list.append(conn)
                     clients[conn] = addr
                 
-                # Kondisi 2: Jika ada pesan/perintah dari klien yang sudah terhubung
                 else:
                     data = notified_socket.recv(4096).decode()
-                    # ... [Logika pemrosesan perintah LIST, UPLOAD, DOWNLOAD, CHAT] ...   
 ```
 
 Alih-alih membuat banyak thread yang dapat membebani CPU dan memori, metode ini memanfaatkan I/O Multiplexing. Fungsi select.select() menerima daftar koneksi (sockets_list) dan akan menahan program sampai ada salah satu socket yang menerima data (baik itu koneksi baru ke server, maupun pesan dari klien).
@@ -79,9 +70,7 @@ Ketika ada aktivitas, program akan mengecek: apakah aktivitas tersebut berasal d
 
 ```
 def start_server():
-    # ... [bind dan listen] ...
     
-    # Setup Poll dengan penanganan kompatibilitas Sistem Operasi
     try:
         poller = select.poll()
     except AttributeError:
