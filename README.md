@@ -145,14 +145,14 @@ Fungsi poll() lebih efisien dari select() karena tidak mengharuskan sistem opera
 Pada implementasi ini, disisipkan sebuah blok try-except AttributeError sebagai bentuk error handling. Hal ini dikarenakan fungsi select.poll() merupakan fitur native dari sistem operasi keluarga Unix/Linux dan tidak didukung oleh sistem operasi Windows. Saat program dijalankan di lingkungan Windows (seperti pada PowerShell), program akan menangkap error tersebut dan memberikan pesan peringatan yang elegan tanpa menyebabkan aplikasi crash secara mendadak. Hal ini menunjukkan pemahaman yang baik terkait lingkungan sistem operasi dalam pemrograman jaringan (Network Programming).
 
 ## Screenshot Hasil
-- Koneksi client ke server
+- Koneksi client ke server <br>
 ![koneksi](img/koneksi.png)
 
-- client mengirim pesan ke server dan mendapat respon dari server
+- client mengirim pesan ke server dan mendapat respon dari server <br>
 ![pesan](img/perintah.png)
 
-- hasil upload dan download yang dilakukan client
+- hasil upload dan download yang dilakukan client <br>
 ![hasil](img/hasil.png)
 
-- tampilan log pada server
+- tampilan log pada server <br>
 ![log](img/log.png)
