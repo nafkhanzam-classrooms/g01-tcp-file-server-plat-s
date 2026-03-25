@@ -157,11 +157,13 @@ Pada implementasi ini, disisipkan sebuah blok try-except AttributeError sebagai 
 - tampilan log pada server <br>
 ![log](img/log.png)
 
+- Tampilan output klien pertama yang menunjukkan penerimaan pesan chat siaran "Halo" dari pengguna lain dan hasil eksekusi perintah /list.            
+<img width="1755" height="332" alt="image" src="https://github.com/user-attachments/assets/0c56095e-36ee-4e42-b307-90820a196018" />
 
-<img width="1755" height="332" alt="image" src="https://github.com/user-attachments/assets/0c56095e-36ee-4e42-b307-90820a196018" />            
-
+- Tampilan proses pengiriman pesan chat siaran, serta demonstrasi keberhasilan perintah /upload dan /download file tes.txt.            
 <img width="1737" height="392" alt="image" src="https://github.com/user-attachments/assets/029b2d9f-9aae-45b3-a421-e22a50cfdfa4" />            
 
+- Tampilan log log aktivitas dari server-thread.py yang merekam koneksi dua klien sekaligus dan memproses permintaan chat broadcast, upload file, permintaan daftar, serta download file dari mereka.                
 <img width="1754" height="350" alt="image" src="https://github.com/user-attachments/assets/5f2a9543-4fa3-465a-97bf-b19f2fc226d6" />            
 
 
